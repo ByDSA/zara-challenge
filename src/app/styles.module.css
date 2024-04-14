@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 48px;
+  gap: 24px;
+}
+
+.favoritesHeader {
+  font-size: 2em;
+  font-weight: bold;
+}

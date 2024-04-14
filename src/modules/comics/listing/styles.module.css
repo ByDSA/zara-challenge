@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  scrollbar-color: var(--color-red) #d9d9d9;
+  scrollbar-width: thin;
+}

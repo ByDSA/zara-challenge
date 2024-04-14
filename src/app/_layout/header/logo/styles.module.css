@@ -1,0 +1,8 @@
+.link {
+  all: unset;
+  padding: 2px;
+}
+
+.link:hover {
+  cursor: pointer;
+}

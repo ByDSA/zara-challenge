@@ -1,0 +1,27 @@
+.main {
+  width: 100%;
+}
+
+.comics {
+  .content {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+    padding: 48px 0;
+
+    .title {
+      font-size: 32px;
+      line-height: 37.5px;
+    }
+  }
+}
+
+.resume {
+  --edge-cut-width: 20px !important;
+
+  .content {
+    height: 320px;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+}

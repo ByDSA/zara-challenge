@@ -1,0 +1,6 @@
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 12px;
+  width: 179.2px;
+}

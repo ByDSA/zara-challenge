@@ -1,0 +1,21 @@
+:root {
+  --color-red-marvel: #ec1d24;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-red: var(--color-red-marvel);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.focusable:focus {
+  outline: 2px solid var(--color-white);
+}

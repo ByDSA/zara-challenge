@@ -1,0 +1,23 @@
+/* Estilos en común entre Character Card y Character Detail */
+
+.main {
+  --edge-cut-width: 20px; /* La distancia es en diagonal */
+
+  color: var(--color-white);
+  background-color: var(--color-black);
+
+  clip-path: polygon(
+    100% 0,
+    100% calc(100% - var(--edge-cut-width) * sqrt(2)),
+    calc(100% - var(--edge-cut-width) * sqrt(2)) 100%,
+    0 100%,
+    0 0
+  );
+
+  /* Alternativa (descartada porque el background rojo se superponía al corte): */
+  /* background: linear-gradient(
+      315deg,
+      transparent var(--edge-cut-width),
+      var(--color-black) var(--edge-cut-width)
+    ); */
+}

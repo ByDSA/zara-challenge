@@ -1,0 +1,25 @@
+.info {
+  width: 100%;
+  padding: 48px;
+  padding-right: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 24px;
+
+  .header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+}
+
+.favButton svg {
+  width: 24px;
+  height: 24px;
+}

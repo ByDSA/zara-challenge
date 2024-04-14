@@ -1,0 +1,8 @@
+{
+  "files.exclude": {
+    "**/node_modules": true,
+    "packages/*/build": true,
+    "**/.vscode": true,
+    ".next": true
+  }
+}

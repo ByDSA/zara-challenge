@@ -1,0 +1,13 @@
+.wrapper {
+  --fixed-width: 960px;
+  width: 100%;
+  min-width: var(--fixed-width);
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+
+  .content {
+    width: var(--fixed-width);
+    overflow: hidden;
+  }
+}

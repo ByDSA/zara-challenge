@@ -1,0 +1,93 @@
+.main {
+  --edge-cut-width: 10px !important;
+
+  --items-per-row-initial: 8;
+  --gap: 16px;
+  --average-width: 188.57px;
+  --max-variance-width: 30px;
+  --width-initial: calc(
+    (100% - calc(var(--items-per-row-initial) - 1) * var(--gap)) /
+      var(--items-per-row-initial)
+  );
+
+  height: 250px;
+
+  min-width: calc(var(--average-width) - var(--max-variance-width));
+  max-width: calc(
+    var(--average-width) + var(--max-variance-width)
+  ); /* Para cuando hay menos de 8 elementos */
+  flex-basis: var(
+    --width-initial
+  ); /* Para que todos los elementos tengan el mismo width */
+  flex-grow: 1;
+}
+
+.photo {
+  width: 100%;
+  height: 185px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo a {
+  display: contents;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main:hover {
+  .footer {
+    background-size: 100% 100%;
+
+    .favoriteIcon.isFavorite svg {
+      color: var(--color-white);
+    }
+  }
+}
+
+.footer {
+  --background-y-initial: 5.38px;
+  --transition-duration: 0.3s;
+  padding: 16px;
+  padding-bottom: 24px;
+  margin: 0;
+  height: auto;
+
+  background: linear-gradient(var(--color-red), var(--color-red)) 0 0px/100%
+    var(--background-y-initial) no-repeat;
+  transition: background-size var(--transition-duration) linear;
+
+  font-size: 14px;
+  line-height: 16.41px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .favoriteIcon svg {
+    /* Fijadas dimensiones porque ambos iconos tienen tamaño ligeramente distinto */
+    width: 12px;
+    height: 25px;
+
+    color: var(--color-white);
+  }
+
+  .favoriteIcon.isFavorite svg {
+    color: var(--color-red);
+    transition: color var(--transition-duration);
+  }
+}
+
+.favoriteIcon {
+  user-select: none; /* Evita que se seleccione texto al hacer click */
+}
+
+.favoriteIcon.clickable {
+  cursor: pointer;
+}

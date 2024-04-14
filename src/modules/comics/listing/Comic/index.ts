@@ -1,0 +1,3 @@
+export {
+  Comic,
+} from "./Comic";

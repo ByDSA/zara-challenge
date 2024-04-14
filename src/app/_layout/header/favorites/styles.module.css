@@ -1,0 +1,20 @@
+.favorites {
+  color: var(--color-white);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.favorites button {
+  all: unset; /* Quitar el CSS por defecto del botón */
+}
+
+.favorites .iconPointer {
+  cursor: pointer;
+}
+
+.favorites svg {
+  color: var(--color-red);
+  width: 24px;
+}

@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 12px 0;
+  gap: 12px;
+}
+
+.footer {
+  font-size: 0.75rem;
+}

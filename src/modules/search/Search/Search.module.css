@@ -1,0 +1,23 @@
+.main {
+  border-bottom: 1px solid var(--color-black);
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 12px;
+}
+
+.main input {
+  border: 0;
+  font-size: 1rem;
+  font-family: unset;
+  width: 100%;
+}
+
+.main input::placeholder {
+  color: #aaaaaa;
+}
+
+.main input:focus {
+  outline: none;
+}
