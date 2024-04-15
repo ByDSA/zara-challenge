@@ -1,3 +1,4 @@
+@value mobileMinWidth from "./values.module.css";
 .main {
   display: flex;
   flex-flow: column nowrap;
@@ -8,4 +9,16 @@
 .favoritesHeader {
   font-size: 2em;
   font-weight: bold;
+}
+
+.characterList {
+  --card-min-width: 188.57px;
+  /* prettier-ignore */
+  @media (width < mobileMinWidth) {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+
+    --card-max-width: 230px;
+  }
 }

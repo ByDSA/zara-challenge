@@ -67,6 +67,9 @@ export default function Home(props: Props) {
   const cardsData = adaptCharacterDataToCardData(resultCharactersData);
   const resultCharactersList = <CharacterList
     cardsData={cardsData}
+    theme={{
+      className: styles.characterList,
+    }}
     card={cardCustomPropsCreator}
   />;
   const onSearchHandler = (value: string | null) => {

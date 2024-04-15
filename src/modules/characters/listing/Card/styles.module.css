@@ -1,11 +1,8 @@
 .main {
   --edge-cut-width: 10px !important;
 
-  --items-per-row-initial: 8;
-  --gap: 16px;
-
-  width: 188.57px;
-  min-width: 188.57px;
+  min-width: var(--card-min-width, 188.57);
+  max-width: var(--card-max-width, 253px);
 }
 
 .photo {
