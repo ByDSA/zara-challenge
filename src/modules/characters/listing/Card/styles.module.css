@@ -3,23 +3,9 @@
 
   --items-per-row-initial: 8;
   --gap: 16px;
-  --average-width: 188.57px;
-  --max-variance-width: 30px;
-  --width-initial: calc(
-    (100% - calc(var(--items-per-row-initial) - 1) * var(--gap)) /
-      var(--items-per-row-initial)
-  );
 
-  height: 250px;
-
-  min-width: calc(var(--average-width) - var(--max-variance-width));
-  max-width: calc(
-    var(--average-width) + var(--max-variance-width)
-  ); /* Para cuando hay menos de 8 elementos */
-  flex-basis: var(
-    --width-initial
-  ); /* Para que todos los elementos tengan el mismo width */
-  flex-grow: 1;
+  width: 188.57px;
+  min-width: 188.57px;
 }
 
 .photo {
@@ -69,6 +55,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
 
   .favoriteIcon svg {
     /* Fijadas dimensiones porque ambos iconos tienen tamaño ligeramente distinto */

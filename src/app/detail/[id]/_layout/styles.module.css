@@ -1,13 +1,22 @@
+@value fixedWidth: 960px;
+
 .wrapper {
-  --fixed-width: 960px;
+  --fixed-width: fixedWidth;
   width: 100%;
-  min-width: var(--fixed-width);
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
 
   .content {
-    width: var(--fixed-width);
+    width: 100%;
     overflow: hidden;
+  }
+
+  /* prettier-ignore */
+  @media (width >= fixedWidth) {
+    min-width: var(--fixed-width);
+    .content {
+      width: var(--fixed-width);
+    }
   }
 }

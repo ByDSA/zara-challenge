@@ -1,6 +1,13 @@
 .main {
+  --comic-width: 179.2px;
+  --comic-height: 252.79px;
   display: flex;
   flex-flow: column nowrap;
   gap: 12px;
-  width: 179.2px;
+}
+
+.main img {
+  width: var(--comic-width);
+  height: var(--comic-height);
+  object-fit: cover;
 }

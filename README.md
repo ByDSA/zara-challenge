@@ -60,7 +60,7 @@ La estructura de carpetas es la siguiente:
   - utils.ts: funciones de utilidad que comparten varios módulos o las vistas.
 ```
 
-He utilizado ESLint como Linter y formateador. El archivo de configuración es `/eslint.config.mjs`, que hace uso también de los archivos de `/lib/eslint/*`.
+He utilizado ESLint como linter y formateador. El archivo de configuración es `/eslint.config.mjs`, que hace uso también de los archivos de `/lib/eslint/*`. Además, utilizo la extensión de VSCode de Prettier para formatear los archivos CSS y JSON (no uso una configuración específica).
 
 Dentro del código fuente, ante algunas decisiones técnicas, existen en algunos casos pequeños comentarios que justifican estas decisiones técnicas (no son comentarios que dividan o expliquen el código en sí).
 

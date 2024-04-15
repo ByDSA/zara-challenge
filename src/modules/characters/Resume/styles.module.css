@@ -1,21 +1,65 @@
-.info {
-  width: 100%;
-  padding: 48px;
-  padding-right: 0;
+@value mobileMinWidth from "../../../app/values.module.css";
 
+.main {
   display: flex;
-  flex-flow: column nowrap;
-  gap: 24px;
+  flex-flow: row nowrap;
 
-  .header {
+  .image {
+    flex: 2;
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-flow: row nowrap;
+    max-width: 320px;
+    min-width: 180px;
   }
 
-  .header h1 {
-    font-size: 2em;
+  .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .info {
+    flex: 3;
+    width: 100%;
+    padding: 48px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+
+    .header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row nowrap;
+      gap: 24px;
+    }
+
+    .header h1 {
+      font-size: 2em;
+    }
+  }
+}
+
+/* prettier-ignore */
+@media (width < mobileMinWidth) {
+  .main {
+    flex-flow: column nowrap;
+
+  .image {
+      width: 100%;
+      max-width: none;
+      flex: 0;
+    }
+
+    .info {
+      flex: 0;
+      padding: 24px 16px;
+    }
+  }
+  .main img {
+    width: 100%;
+    height: auto;
   }
 }
 

@@ -10,8 +10,10 @@ type Props = {
 };
 export const Resume = ( { data, favButton }: Props) => {
   return (
-    <>
-      <aside><Image src={data.urlImage} alt="Character Image" width={320} height={320} /></aside>
+    <section className={styles.main}>
+      <aside className={styles.image}>
+        <Image src={data.urlImage} alt="Character Image" width={320} height={320} />
+      </aside>
       <aside className={styles.info}>
         <header className={styles.header}>
           <aside>
@@ -27,6 +29,6 @@ export const Resume = ( { data, favButton }: Props) => {
           <p>{data.description}</p>
         </section>
       </aside>
-    </>
+    </section>
   );
 };
