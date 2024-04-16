@@ -4,6 +4,7 @@
   flex-flow: column nowrap;
   padding: 48px;
   gap: 24px;
+  width: 100vw;
 }
 
 .favoritesHeader {

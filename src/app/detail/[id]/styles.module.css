@@ -1,7 +1,7 @@
 @value mobileMinWidth from "../../values.module.css";
 
 .main {
-  width: 100%;
+  width: 100vw;
 }
 
 .comics {

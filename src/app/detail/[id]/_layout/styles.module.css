@@ -2,7 +2,7 @@
 
 .wrapper {
   --fixed-width: fixedWidth;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   flex-flow: column nowrap;

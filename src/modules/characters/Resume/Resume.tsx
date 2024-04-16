@@ -12,7 +12,7 @@ export const Resume = ( { data, favButton }: Props) => {
   return (
     <section className={styles.main}>
       <aside className={styles.image}>
-        <Image src={data.urlImage} alt="Character Image" width={320} height={320} />
+        {data.urlImage && <Image src={data.urlImage} alt="Character Image" fill priority />}
       </aside>
       <aside className={styles.info}>
         <header className={styles.header}>

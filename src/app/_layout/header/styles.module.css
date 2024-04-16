@@ -1,11 +1,11 @@
 .header {
   background-color: var(--color-black);
-  width: 100%;
+  width: 100vw;
   height: 84px;
   padding: 16px 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  overflow-x: hidden;
+  overflow: hidden;
 }

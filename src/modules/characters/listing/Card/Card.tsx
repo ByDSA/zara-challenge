@@ -21,7 +21,7 @@ type Props = CustomProps & DataProps;
 export type CustomPropsCreator = (data: DataProps)=> CustomProps;
 
 export const Card = ( { data, favoriteButton, href }: Props) => {
-  const image = <Image src={data.urlImage} alt={data.label} width={188.57} height={189.97} />;
+  const image = <Image src={data.urlImage} alt={data.label} fill priority />;
   const photoDiv = <header className={styles.photo}>
     { href ? <a href={href}>{image}</a> : image}
   </header>;

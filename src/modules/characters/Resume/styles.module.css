@@ -4,9 +4,15 @@
   display: flex;
   flex-flow: row nowrap;
 
+  /*prettier-ignore*/
+  @media (width >= mobileMinWidth) {
+    max-height: 320px;
+  }
+
   .info {
-    width: 67%;
+    flex: 1;
     padding: 48px;
+    min-width: 300px;
 
     display: flex;
     flex-flow: column nowrap;
@@ -15,6 +21,10 @@
     .header h1 {
       font-size: 2em;
     }
+  }
+
+  .info section {
+    overflow-y: auto;
   }
 }
 
@@ -28,16 +38,13 @@
 }
 
 .main .image {
-  display: flex;
-  width: 33%;
-  max-width: 320px;
-  min-width: 180px;
+  position: relative;
+
+  width: 320px;
+  height: 320px;
 }
 
 .main .image img {
-  min-width: 180px;
-  width: 100%;
-  height: auto;
   object-fit: cover;
 }
 
@@ -46,20 +53,19 @@
   .main {
     flex-flow: column nowrap;
 
-  .image {
+    .image {
       width: 100%;
-      max-width: none;
-      flex: 0;
+      height: mobileMinWidth;
     }
 
     .info {
-      flex: 0;
       padding: 24px 16px;
     }
   }
   .main img {
-    width: 100%;
-    height: auto;
+    height: mobileMinWidth;
+    position: relative !important;
+    object-position: center !important;
   }
 }
 
