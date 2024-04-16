@@ -1,4 +1,4 @@
-import { Data, dataSchema } from "../../model/Data";
+import { CharacterData as Data, characterDataSchema as dataSchema } from "../../model";
 import { ResponseJson } from "./ResponseJson";
 
 export function parseData(response: ResponseJson): Data {

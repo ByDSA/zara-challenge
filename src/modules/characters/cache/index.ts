@@ -1,4 +1,4 @@
-import { Data as Character } from "../model/Data";
+import { CharacterData as Character } from "../model";
 
 type CharactersCache = Record<number, Character>;
 

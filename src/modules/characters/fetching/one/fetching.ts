@@ -1,5 +1,5 @@
 import { addCharacterToCache } from "../../cache";
-import { Data } from "../../model/Data";
+import { CharacterData as Data } from "../../model";
 import { ResponseJson, responseJsonSchema } from "./ResponseJson";
 import { GenerateUrlProps, generateUrl } from "./generateUrl";
 import { parseData } from "./parser";

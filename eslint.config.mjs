@@ -9,18 +9,22 @@ const barrels = [
 ];
 const nextBarrels = [
   "next/{image,navigation}",
+  "next/font/*",
+];
+const projectConfigImportNoInternalModulesAllow = [
+  "**/*modules/**/contexts/**/*",
+  ...barrels,
+  ...nextBarrels,
 ];
 const projectConfig = [
   {
-    files: ["src/{modules,app}/**/*.ts{,x}", "jest.config.ts"],
+    files: ["src/{modules,app}/**/!(*.spec).ts{,x}", "jest.config.ts"],
     rules: {
       "import/no-internal-modules": [
         "error",
         {
           allow: [
-            "**/*modules/**/contexts/**/*",
-            ...barrels,
-            ...nextBarrels,
+            ...projectConfigImportNoInternalModulesAllow,
           ],
         },
       ],
@@ -33,9 +37,8 @@ const projectConfig = [
         "error",
         {
           allow: [
+            ...projectConfigImportNoInternalModulesAllow,
             "**/_layout/*",
-            ...barrels,
-            ...nextBarrels,
           ],
         },
       ],
