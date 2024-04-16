@@ -41,16 +41,20 @@ export const FavButton = ( { initialActive, onClick, theme }: Props) => {
       return newValue;
     } );
   } );
+  const isClickable = !!onClick;
+  const ariaLabel = active ? "Remove from favorites" : "Add to favorites";
 
   return (
-    <aside className={
+    <button className={
       classNames(
-        styles.favoriteIcon,
+        styles.favoriteButton,
         active && styles.isFavorite,
-        !!onClick && styles.clickable,
+        isClickable && styles.clickable,
+        isClickable && "focusable",
         theme?.className,
       )
     } onClick={innerOnClick}
-    >{favoriteIcon}</aside>
+    aria-label={ariaLabel}
+    >{favoriteIcon}</button>
   );
 };

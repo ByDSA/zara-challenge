@@ -27,7 +27,7 @@
   .footer {
     background-size: 100% 100%;
 
-    .favoriteIcon.isFavorite svg {
+    .favoriteButton.isFavorite svg {
       color: var(--color-white);
     }
   }
@@ -54,7 +54,7 @@
   align-items: center;
   gap: 24px;
 
-  .favoriteIcon svg {
+  .favoriteButton svg {
     /* Fijadas dimensiones porque ambos iconos tienen tamaño ligeramente distinto */
     width: 12px;
     height: 25px;
@@ -62,16 +62,20 @@
     color: var(--color-white);
   }
 
-  .favoriteIcon.isFavorite svg {
+  .favoriteButton.isFavorite svg {
     color: var(--color-red);
     transition: color var(--transition-duration);
   }
 }
 
-.favoriteIcon {
+.favoriteButton {
   user-select: none; /* Evita que se seleccione texto al hacer click */
 }
 
-.favoriteIcon.clickable {
+.favoriteButton.clickable {
   cursor: pointer;
+}
+
+button.favoriteButton {
+  all: unset;
 }
